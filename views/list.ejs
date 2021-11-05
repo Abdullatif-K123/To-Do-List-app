@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeekDay</title>
+    <link rel="stylesheet" href="stylee/styles.css">
+</head>
+<body>
+    <div class = "box" id = "heading">
+        <h1  ><%= now %></h1>
+    </div>
+     
+     <div class = "box">
+  
+         <% DoList.forEach(function(elem) { %>
+         <div class = "item">
+             <input type="checkbox">
+            <p class = items> <%=elem %></p>
+         </div> 
+         <% }); %> 
+             <form class = "item"  action="/" method="post">
+             <input type="text" name ="toDo" placeholder="I want to..." autofocus required="required" autocomplete="off" >
+             <button type="submit" class="rotateimg180">+</button>
+          </form>
+    </div>
+
+</body>
+</html>

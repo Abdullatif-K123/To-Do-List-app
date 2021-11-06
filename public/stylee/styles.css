@@ -51,11 +51,12 @@ input+p::before {
   height: 100%;
   transition: width 0.9s linear;
   display: inline;
-  color:gray;
+   
 }
  
 input:checked+p{
-   color:gray
+   color:gray;
+   transition: 0.7s;
 }
   
 

@@ -71,7 +71,10 @@ input[type="checkbox"] {
   
   transform: rotate(360deg);
 }
-
+.delete{
+  cursor: pointer;
+  background-color: transparent;
+}
 p {
   margin: 0;
   padding: 40;
@@ -79,7 +82,13 @@ p {
   font-weight: 200;
   color: #022552;
 }
+img{ 
+   width: 42px;
+}
 
+.del {
+   display:none;
+}
 form {
   text-align: center;
   margin-left: 20px;

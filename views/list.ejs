@@ -7,13 +7,17 @@
   
          <% DoList.forEach(function(elem) { %>
          <div class = "item">
-             <input type="checkbox">
-            <p class = items> <%=elem %></p>
+             <input type="checkbox" <%if(false){%> <%= "checked"%> <%}%>> 
+            <p class = items> <%=elem.name %></p>
+            <form action="/delete" method = "post">
+            <% var delet = {title: now, name: elem.name}; delet = JSON.stringify(delet) %>
+            <button class="delete" type = "submit" name = "delete" value = '<%= delet%>'><img src="stylee/bin.png" alt="bin cycle"></button>
+            </form>
          </div> 
          <% }); %> 
              <form class = "item"  action="/" method="post">
              <input type="text" name ="toDo" placeholder="I want to..." autofocus required="required" autocomplete="off" >
-             <button type="submit" class="rotateimg180" name = "list" value = <%= now %> >+</button>
+             <button type="submit" class="rotateimg180" name = "list" value = '<%= now %>' >+</button>
              </form>
     </div>
     <%- include('footer') -%> 

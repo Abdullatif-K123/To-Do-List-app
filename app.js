@@ -9,7 +9,7 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 //Connect the database location
-mongoose.connect("mongodb+srv://Abdullatif:test123@cluster0.12sel.mongodb.net/todolistDB");
+mongoose.connect("");
 
 //Create a Shcema to our database
 const todoShema = new mongoose.Schema({
